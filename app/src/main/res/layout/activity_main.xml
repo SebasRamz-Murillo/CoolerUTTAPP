@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.ramiro174.controlbluetooth.Views.ControlLogic">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="237dp"
+        android:layout_height="110dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.591"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header"
+        app:layout_constraintVertical_bias="0.21">
+
+        <TextView
+            android:id="@+id/textView_angle_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0°" />
+
+
+        <TextView
+            android:id="@+id/textView_strength_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/textView_angle_right"
+            android:text="0%" />
+
+
+        <TextView
+            android:id="@+id/textView_coordinate_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x050:x050" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#539FA2"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <Spinner
+            android:id="@+id/SpnListaBluetooth"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.764"
+            app:layout_constraintStart_toEndOf="@+id/mBluetoothStatus"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mBluetoothStatus"
+            android:layout_width="132dp"
+            android:layout_height="46dp"
+
+            android:fontFamily="sans-serif-medium"
+            android:text="Conectate a tu hielera!"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.003"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <io.github.controlwear.virtual.joystick.android.JoystickView
+        android:id="@+id/joystickView_right"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="136dp"
+        app:JV_backgroundColor="#0F1010"
+        app:JV_borderColor="#ABCCB1"
+        app:JV_borderWidth="4dp"
+        app:JV_buttonColor="#ABCCB1"
+
+        app:JV_buttonSizeRatio="30%"
+        app:JV_fixedCenter="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <!---
+    <com.github.lzyzsd.circleprogress.DonutProgress
+        android:id="@+id/donutprogress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:donut_circle_starting_degree="@integer/material_motion_duration_medium_2"
+        app:donut_finished_color="@color/black"
+        app:donut_progress="0"
+        app:donut_text_color="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/joystickView_right" />
+-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
